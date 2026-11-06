@@ -1,0 +1,47 @@
+# Question 3 - String Manipulation
+# Topic: Name Formatting Utility
+#
+# Task 1:
+# Write a function called formatName(firstName, lastName) that accepts two strings
+# and returns a formatted string in this format: "lastName, firstName"
+# Example: formatName("John", "Smith") → "Smith, John"
+
+def formatName(firstName, lastName):
+    # Capitalize the names properly using .capitalize() to handle lowercase inputs (e.g., "john", "smith")
+    formatted_last = lastName.capitalize()
+    formatted_first = firstName.capitalize()
+    
+    # Return formatted string as "lastName, firstName"
+    return f"{formatted_last}, {formatted_first}"
+
+
+# Task 2:
+# Write a function called formatInitials(firstName, lastName) that returns the
+# initials of the person as a string in uppercase.
+# Example: formatInitials("john", "smith") → "J.S."
+# Note: your function should handle inputs in any case (upper, lower, or mixed)
+# and always produce properly capitalised output.
+
+def formatInitials(firstName, lastName):
+    # Extract the first character of each name and convert to uppercase
+    first_initial = firstName[0].upper()
+    last_initial = lastName[0].upper()
+    
+    # Return initials formatted with trailing periods: "F.L."
+    return f"{first_initial}.{last_initial}."
+
+
+# Task 3:
+# Call both functions with the following inputs and print each result:
+#   formatName("Alice", "Tan")  → Expected: "Tan, Alice"
+#   formatName("bob", "lim")    → Expected: "Lim, Bob"
+#   formatInitials("Alice","Tan") → Expected: "A.T."
+#   formatInitials("bob","lim")   → Expected: "B.L."
+
+# Add your code here
+
+# Print test calls matching expected outputs
+print(formatName("Alice", "Tan"))     # Expected: "Tan, Alice"
+print(formatName("bob", "lim"))       # Expected: "Lim, Bob"
+print(formatInitials("Alice", "Tan")) # Expected: "A.T."
+print(formatInitials("bob", "lim"))   # Expected: "B.L."
